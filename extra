@@ -1,0 +1,81 @@
+NodeJs => https://nodejs.org/en/
+Visual Studio code: https://code.visualstudio.com/
+Github: https://github.com/
+GitHubProfile: https://github.com/Aakashdeveloper
+GitBash: https://git-scm.com/downloads
+
+/*
+Npm 
+
+Package.json
+local and global Package
+some code with nodejs
+*/
+
+Node Package Manger
+Package.json
+JavasScript Object Notation
+{
+    name:"john",
+    class:"ui"
+},
+{
+    name:"abhy",
+    class:"node"
+}
+
+
+/**********
+Step To create Package.json
+**************/
+=>Go inside the folder with terminal
+    =>npm init
+        =>Enter all details
+
+/**************************
+    Package in Node.Js
+**************************/
+Local Package
+Global Package
+
+
+/**************************
+   Step to install local package
+**************************/
+=>Go inside the folder with terminal
+    => npm install --save <package name>
+
+
+*** Default Always Latest
+For Specific
+=> npm install express@4.17.1
+
+/**************************
+   Global Package
+**************************/
+Only package
+    =>To start
+        =>To Relaod
+        =>To Test
+        =>To monitor
+
+        Package require at th time of development
+
+
+=>For Windows
+    => Run cmd as admin
+        =>npm install -g @aakashdeveloper/create-node-app
+
+=>For Mac/linux
+    => sudo npm install -g @aakashdeveloper/create-node-app
+
+=>sudo npm install -g nodemon
+
+/**************************
+   Git Commands
+**************************/
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/EDU_july_Node_Mrng.git
+git push -u origin master

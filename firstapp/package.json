@@ -1,0 +1,16 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "this is about node",
+  "main": "myadd.js",
+  "scripts": {
+   "start":"node myadd.js",
+   "dev":"nodemon mytext.js"
+  },
+  "keywords": [
+    "node",
+    "npm"
+  ],
+  "author": "edureka",
+  "license": "ISC"
+}
