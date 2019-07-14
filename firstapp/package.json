@@ -4,13 +4,16 @@
   "description": "this is about node",
   "main": "myadd.js",
   "scripts": {
-   "start":"node myadd.js",
-   "dev":"nodemon mytext.js"
+    "start": "node myadd.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "node",
     "npm"
   ],
   "author": "edureka",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
