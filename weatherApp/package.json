@@ -1,0 +1,22 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "this is weather App with EJS",
+  "main": "index.js",
+  "scripts": {
+    "start":"node app.js",
+    "dev":"nodemon app.js"
+  },
+  "keywords": [
+    "Node",
+    "Ejs",
+    "Express"
+  ],
+  "author": "Edureka",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}

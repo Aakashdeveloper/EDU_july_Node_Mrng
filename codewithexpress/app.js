@@ -28,3 +28,11 @@ app.listen(port,function(err){
     if(err) throw err;
     console.log('server is running on port '+port)
 });
+
+
+
+Delay(2, ()=> {
+    delay1((a)=>{
+        console.log('final output', a)
+    })
+})

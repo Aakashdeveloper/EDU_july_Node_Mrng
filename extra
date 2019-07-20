@@ -106,3 +106,14 @@ NGINX.CONF
             proxy_cache_bypass $http_upgrade;
         }
     }
+
+
+
+<h1>Welcome to node</h1>
+<p><%=title%></p>
+
+<ul>
+    <% for(i=0;i<city.length;i++){%>
+    <li><%=city[i]%></li>
+    <%}%>
+</ul>
