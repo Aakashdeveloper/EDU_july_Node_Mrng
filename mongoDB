@@ -1,0 +1,100 @@
+rollNo | Name   | Hindi | english
+    1     John  |       |  80
+    2     Bill  |   80  |
+
+
+------------------------------
+[
+    {
+       rollNo:1,
+       Name:John
+       English:80     
+    },
+    {
+        rollNo:2,
+        Name:Bill
+        Hindi:80
+    }
+]
+
+------------------------
+Sql                 Mongo
+--------------------------
+Database            Database
+Table               Collections
+Row                 Document
+
+
+Windows
+=> C:\data\db
+
+Mac/Linux
+Run sudo chown -R `id -un` /data/db
+
+
+=>In CMD 
+=> Type mongod
+=>Default Port 27017
+=> In New CMD
+=> Type mongo
+
+To See all Database
+=>show dbs 
+
+To see all collection in db
+=> use <dbname>
+=> show collections
+
+Simple find
+db.<collection_name>.find()
+
+FindWithCondition
+db.<collection_name>.find({condition})
+db.movies.find({"rate":4.5})
+
+FindWithCondition & projection
+db.movies.find({"rate":4.5},{_id:0})
+
+
+db.movies.find().limit(2).pretty()
+db.movies.find().skip(6).pretty()
+
+db.movies.find().sort({"rate":-1}).pretty()
+db.movies.count()
+
+
+ db.julynode.insert({_id:1,"name":"Bill", "rollNo":3})
+  db.julynode.insert({_id:2,"name":true, "rollNo":3})
+
+db.julynode.insertMany([
+    {_id:3,"name":"Stephen", "rollNo":4},
+    {_id:4,"name":"Ankit", "rollNo":5}
+])
+
+
+to create new db
+use julynode
+db.mycollection.insert({_id:1,"name":"Bill", "rollNo":3})
+
+
+db.mycollection.distinct()
+
+db.mycollection.update({"population":23423435},{"city":"Amsterdam","population":23423435})
+db.mycollection.update(
+    {"city":"Helsinki"},
+    {
+        $set:{
+          "population":12453464  
+        }
+    }
+)
+db.mycollection.update(
+    {"city":"Mumbai"},
+    {
+        $set:{
+          "city":"Mumbai",
+          "population":143635634  
+        }
+    },
+    {upsert:true}
+)
