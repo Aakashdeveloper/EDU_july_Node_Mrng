@@ -127,3 +127,59 @@ source ./sendgrid.env
 
 
 npm i express mongodb ejs
+
+
+npm i express graphql express-graphql lodash axios
+
+
+/*************
+    Function
+**************/
+//Es5
+function add(a,b){
+    return a+b
+}
+var
+
+//Es6
+var add = (a,b) => {
+    return a+b
+}
+let 
+const
+
+declare
+assign
+
+
+add(a,b)
+
+
+var = variable can redeclare and reassign
+let = variable cannot redeclare but reassign
+const= niether redeclare nore reassign
+
+
+var a = 10
+var b = "my age is "+a 
+var c = `my age is ${a}`
+
+
+/**************
+    Dummy Api 
+***************/
+json-server
+
+npm i -g json-server
+json-server --watch db.json --port 8900
+
+
+{
+  product(id:3){
+     name,
+     image
+  }
+}
+
+
+ npm i @babel/core @babel/preset-env @babel/register babel-polyfill
