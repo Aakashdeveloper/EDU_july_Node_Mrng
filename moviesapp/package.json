@@ -1,0 +1,23 @@
+{
+  "name": "moviesapp",
+  "version": "1.0.0",
+  "description": "this is node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js",
+    "dev":"nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "ejs",
+    "mongo"
+  ],
+  "author": "edureka",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.0-beta2"
+  }
+}

@@ -124,3 +124,6 @@ NGINX.CONF
 echo "export SENDGRID_API_KEY='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'" > sendgrid.env
 echo "sendgrid.env" >> .gitignore
 source ./sendgrid.env
+
+
+npm i express mongodb ejs
