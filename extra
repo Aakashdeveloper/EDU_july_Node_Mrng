@@ -183,3 +183,10 @@ json-server --watch db.json --port 8900
 
 
  npm i @babel/core @babel/preset-env @babel/register babel-polyfill
+
+ /************
+    For JWT
+***************/
+npm i bcryptjs
+npm i body-parser ejs express jsonwebtoken mongoose node-localstorage
+npm i express-session
