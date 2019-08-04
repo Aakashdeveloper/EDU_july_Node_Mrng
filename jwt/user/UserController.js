@@ -20,4 +20,27 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 })
 
+router.get('/profile', (req,res) => {
+    var token = localStorage.getItem('authtoken');
+    if(!token) {
+        res.redirect('/signin')
+    }       
+    jwt.verify(token, config.secert, (err, decoded) => {
+        if(err) {
+            res.redirect('/signin')
+        }
+        User.findById(decoded.id, {password:0}, (err,user) => {
+            if(err) {res.redirect('/signin')}
+            if(!user) {res.redirect('/signin')}
+
+            res.render('profile',{user});
+        })
+    })
+});
+
+router.get('/logout', (req,res) => {
+    localStorage.removeItem('authtoken');
+    res.redirect('/signin')
+})
+
 module.exports = router;

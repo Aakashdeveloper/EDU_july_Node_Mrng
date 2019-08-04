@@ -190,3 +190,12 @@ json-server --watch db.json --port 8900
 npm i bcryptjs
 npm i body-parser ejs express jsonwebtoken mongoose node-localstorage
 npm i express-session
+
+
+/********
+For Node Seed
+***********/
+sudo npm i -g @aakashdeveloper/create-node-app
+
+run cmd as admin
+npm i -g @aakashdeveloper/create-node-app

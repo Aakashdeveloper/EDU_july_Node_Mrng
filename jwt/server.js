@@ -12,7 +12,7 @@ app.use(express.static(__dirname+'/public'));
 let sess;
 app.get('/signin', (req,res) => {
     sess= req.session;
-    res.render('index')
+    res.render('index',{msg: req.query.msg?req.query.msg:''})
 })
 
 app.listen(port, () => {

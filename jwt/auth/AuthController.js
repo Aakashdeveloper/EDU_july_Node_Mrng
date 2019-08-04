@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const app = express();
+const LocalStorage = require('node-localstorage').LocalStorage;
+localStorage = new LocalStorage('./scratch')
 // For parsing form sata
 const bodyParser = require('body-parser');
 // For validating and generating token
@@ -30,7 +32,9 @@ router.post('/register', (req,res) =>  {
         /*var token = jwt.sign({id: user._id}, config.secert,{
             expiresIn: 86400 // expire in 24 hours
         });*/
-       res.send('Registration successful')
+       //res.send('Registration successful')
+       const string = encodeURIComponent('SuccessFully Regsiter Please Login Now');
+       res.redirect('/signin?msg=' + string)
     })
 });
 
@@ -44,7 +48,9 @@ router.post('/login', (req,res) => {
             var token = jwt.sign({id: user._id}, config.secert,{
                 expiresIn:86400// expire in 24 hours
             });
-            res.send(token);
+            console.log('in login')
+            localStorage.setItem('authtoken',token);
+            res.redirect('/users/profile');
         }
     })
 });
