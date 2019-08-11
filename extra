@@ -199,3 +199,14 @@ sudo npm i -g @aakashdeveloper/create-node-app
 
 run cmd as admin
 npm i -g @aakashdeveloper/create-node-app
+
+/********
+For Testing
+***********/
+npm i chai chai-http mocha
+
+
+pm2 start app.js -i 3
+
+docker build . -t ahanda205/weatherapp
+docker run -p 9001:9000 ahanda205/weatherapp1
